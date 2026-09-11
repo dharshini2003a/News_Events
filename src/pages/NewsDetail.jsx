@@ -130,7 +130,6 @@ function PhotoCarousel({ images, title }) {
 export default function NewsDetail() {
   const { id } = useParams();
   const news = newsList.find((n) => String(n.id) === id);
-  const [heroOpen, setHeroOpen] = useState(false);
 
   if (!news) {
     return (
@@ -141,12 +140,10 @@ export default function NewsDetail() {
     );
   }
 
-  // A news item might have: a hero photo + extra gallery photos, just a
-  // single photo, or no photo at all (text-only). We only render the
-  // sections that actually have something to show.
-  const hasHero = Boolean(news.thumbnail);
+  // A news item might have extra gallery photos besides the thumbnail
+  // (which is only used for the news list/card view now — the detail
+  // page itself no longer shows a large hero image).
   const additionalPhotos = (news.gallery || []).filter((g) => g !== news.thumbnail);
-  const allPhotos = hasHero ? [news.thumbnail, ...additionalPhotos] : additionalPhotos;
 
   return (
     <div className="container page-content">
@@ -161,12 +158,6 @@ export default function NewsDetail() {
         <span>📍 {news.centre}</span>
         <span>🏷 {news.category}</span>
       </div>
-
-      {hasHero && (
-        <div className="detail-hero" onClick={() => setHeroOpen(true)}>
-          <img src={news.thumbnail} alt={news.title} />
-        </div>
-      )}
 
       <div className="detail-body">
         {news.body.map((para, i) => (
@@ -192,15 +183,6 @@ export default function NewsDetail() {
           <h4>Photo Gallery</h4>
           <PhotoCarousel images={additionalPhotos} title={news.title} />
         </div>
-      )}
-
-      {heroOpen && (
-        <Lightbox
-          images={allPhotos}
-          title={news.title}
-          startIndex={0}
-          onClose={() => setHeroOpen(false)}
-        />
       )}
 
       <p style={{ marginTop: 30 }}>

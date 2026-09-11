@@ -1,18 +1,17 @@
 import { useMemo, useState } from "react";
 import { Link, useSearchParams } from "react-router-dom";
-import { newsList, categories, formatDate } from "../data/newsData";
-import { featuredIds } from "../data/Featurednews";
+import { newsList, centres, formatDate } from "../data/newsData";
 
 const PAGE_SIZE = 5;
-const QUICK_FILTERS = ["All", "This Week", ...categories.filter((c) => c !== "All")];
 
-function isWithinLastWeek(dateStr) {
-  const d = new Date(dateStr);
-  const now = new Date();
-  const weekAgo = new Date(now);
-  weekAgo.setDate(now.getDate() - 7);
-  return d >= weekAgo && d <= now;
-}
+// Build the list of years present in the data, newest first.
+const YEARS = ["All Years", ...Array.from(
+  new Set(newsList.map((n) => new Date(n.date).getFullYear()))
+).sort((a, b) => b - a)];
+
+// Places dropdown reuses the same "centres" list already defined in
+// newsData.js (Madurai, Salem, Aurolab, LAICO, Visitors, etc.)
+const PLACES = centres; // first entry is already "All Locations"
 
 function getPageNumbers(current, total) {
   if (total <= 7) return Array.from({ length: total }, (_, i) => i + 1);
@@ -27,51 +26,56 @@ function getPageNumbers(current, total) {
 
 export default function CurrentNews() {
   const [query, setQuery] = useState("");
-  const [filter, setFilter] = useState("All");
   const [sortOrder, setSortOrder] = useState("newest");
+  const [yearFilter, setYearFilter] = useState("All Years");
+  const [placeFilter, setPlaceFilter] = useState(PLACES[0]); // "All Locations"
   const [page, setPage] = useState(1);
   const [searchParams] = useSearchParams();
   const [activeTag, setActiveTag] = useState(searchParams.get("tag") || null);
 
   const filtered = useMemo(() => {
     let list = newsList.filter((n) => {
-      const matchesFilter =
-        filter === "All" ||
-        (filter === "This Week" ? isWithinLastWeek(n.date) : n.category === filter);
       const matchesQuery =
         query.trim() === "" ||
         n.title.toLowerCase().includes(query.toLowerCase()) ||
         n.keywords.some((k) => k.toLowerCase().includes(query.toLowerCase()));
+      // A tag click can match the centre (#Madurai), the category
+      // (#CME, #Events...) or any keyword — whichever the user tapped.
       const matchesTag =
         !activeTag ||
         n.centre.toLowerCase() === activeTag.toLowerCase() ||
+        n.category.toLowerCase() === activeTag.toLowerCase() ||
         n.keywords.some((k) => k.toLowerCase() === activeTag.toLowerCase());
-      return matchesFilter && matchesQuery && matchesTag;
+      const matchesYear =
+        yearFilter === "All Years" || new Date(n.date).getFullYear() === yearFilter;
+      const matchesPlace =
+        placeFilter === "All Locations" ||
+        n.centre.toLowerCase() === placeFilter.toLowerCase();
+      return matchesQuery && matchesTag && matchesYear && matchesPlace;
     });
     list = [...list].sort((a, b) =>
       sortOrder === "newest" ? new Date(b.date) - new Date(a.date) : new Date(a.date) - new Date(b.date)
     );
-
-    // Featured/pinned news always float to the top, in the order set in
-    // featuredNews.js — everything else keeps the normal date sort below it.
-    const featured = featuredIds
-      .map((id) => list.find((n) => n.id === id))
-      .filter(Boolean);
-    const rest = list.filter((n) => !featuredIds.includes(n.id));
-    return [...featured, ...rest];
-  }, [query, filter, sortOrder, activeTag]);
+    return list;
+  }, [query, sortOrder, activeTag, yearFilter, placeFilter]);
 
   const totalPages = Math.max(1, Math.ceil(filtered.length / PAGE_SIZE));
   const pageItems = filtered.slice((page - 1) * PAGE_SIZE, page * PAGE_SIZE);
   const pageNumbers = getPageNumbers(page, totalPages);
 
-  function handleFilter(f) {
-    setFilter(f);
+  function handleTagClick(tag) {
+    setActiveTag((prev) => (prev && prev.toLowerCase() === tag.toLowerCase() ? null : tag));
     setPage(1);
   }
 
-  function handleTagClick(tag) {
-    setActiveTag((prev) => (prev && prev.toLowerCase() === tag.toLowerCase() ? null : tag));
+  function handleYearChange(e) {
+    const val = e.target.value;
+    setYearFilter(val === "All Years" ? "All Years" : Number(val));
+    setPage(1);
+  }
+
+  function handlePlaceChange(e) {
+    setPlaceFilter(e.target.value);
     setPage(1);
   }
 
@@ -92,6 +96,7 @@ export default function CurrentNews() {
           />
           <span className="search-icon">🔍</span>
         </div>
+
         <div className="sort-box">
           <span className="sort-label">Sort By :</span>
           <select value={sortOrder} onChange={(e) => setSortOrder(e.target.value)}>
@@ -99,18 +104,64 @@ export default function CurrentNews() {
             <option value="oldest">Oldest First</option>
           </select>
         </div>
+
+        <div className="sort-box">
+          <span className="sort-label">Year :</span>
+          <select value={yearFilter} onChange={handleYearChange}>
+            {YEARS.map((y) => (
+              <option key={y} value={y}>
+                {y}
+              </option>
+            ))}
+          </select>
+        </div>
+
+        <div className="sort-box">
+          <span className="sort-label">Place :</span>
+          <select value={placeFilter} onChange={handlePlaceChange}>
+            {PLACES.map((p) => (
+              <option key={p} value={p}>
+                {p}
+              </option>
+            ))}
+          </select>
+        </div>
       </div>
 
+      {/* "All" -> "Current News" (this page, always highlighted since we're on it)
+          "This Week" -> "Archives" (navigates to the Archives page).
+          The other category buttons (CME, Events, Workshop...) now live as
+          keyword tags under each news item below instead of here. */}
       <div className="filter-tabs">
-        {QUICK_FILTERS.map((c) => (
-          <button
-            key={c}
-            className={filter === c ? "active" : ""}
-            onClick={() => handleFilter(c)}
-          >
-            {c}
-          </button>
-        ))}
+        <Link
+          to="/current-news"
+          style={{
+            display: "inline-block",
+            padding: "10px 20px",
+            borderRadius: "20px",
+            marginRight: "10px",
+            backgroundColor: "#152642",
+            color: "#fff",
+            textDecoration: "none",
+            fontWeight: 600,
+          }}
+        >
+          Current News
+        </Link>
+        <Link
+          to="/archives"
+          style={{
+            display: "inline-block",
+            padding: "10px 20px",
+            borderRadius: "20px",
+            backgroundColor: "#dce6f4",
+            color: "#152642",
+            textDecoration: "none",
+            fontWeight: 500,
+          }}
+        >
+          Archives
+        </Link>
       </div>
 
       {activeTag && (
@@ -149,6 +200,18 @@ export default function CurrentNews() {
                   onClick={() => handleTagClick(n.centre)}
                 >
                   #{n.centre.replace(/\s+/g, "")}
+                </button>
+                <button
+                  type="button"
+                  className={
+                    "hashtag" +
+                    (activeTag && activeTag.toLowerCase() === n.category.toLowerCase()
+                      ? " active"
+                      : "")
+                  }
+                  onClick={() => handleTagClick(n.category)}
+                >
+                  #{n.category.replace(/\s+/g, "")}
                 </button>
               </div>
             </div>

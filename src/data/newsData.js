@@ -254,7 +254,7 @@ export const newsList = [
   {
     id: 16,
     title: "Exposure Visit by SELCO India Team",
-    centre: "Madurai",
+    centre: "LAICO",
     date: "2026-08-01",
     category: "Others",
     thumbnail: "/images/selco_visit.svg",
@@ -265,7 +265,7 @@ export const newsList = [
       "The visit provided insights into LAICO's role and key initiatives, Aravind's Seven Pillars and their contribution to organisational sustainability and scale, approaches to external funding, research and knowledge dissemination, the Aravind October Summit, vision stories, and outreach models.",
       "The visit enabled the SELCO team to gain a deeper understanding of Aravind's approach to creating and sustaining social impact, with learnings that could support the future expansion of SELCO's external services globally.",
     ],
-    keywords: ["Social Enterprise", "Madurai", "LAICO", "Exposure Visit"],
+    keywords: ["Social Enterprise", "LAICO", "Exposure Visit"],
     gallery: ["/images/selco_visit.svg"],
   },
   {
@@ -302,23 +302,7 @@ export const newsList = [
     keywords: ["Orbis International", "Madurai", "Eye Care", "Partnership"],
     gallery: ["/images/orbis_visit.svg"],
   },
-  {
-    id: 19,
-    title: "PhD Research Visit by Altimetrik CHRO",
-    centre: "Aravind",
-    date: "2026-08-29",
-    category: "Others",
-    thumbnail: "/images/phd_research.svg",
-    shortDescription:
-      "Dhirendra Nath, Chief Human Resource Officer, Altimetrik, visited Aravind as part of his PhD research on family businesses.",
-    body: [
-      "Dhirendra Nath, Chief Human Resource Officer, Altimetrik, who leads the company's global people strategy, talent agenda, and organisational development initiatives, and is currently pursuing a PhD in Family Businesses at IIM Visakhapatnam, visited Aravind as part of his research.",
-      "The visit focused on understanding how family owners' motivations, priorities, and values influence HR practices and organisational outcomes in family-run enterprises. During his visit, he interacted with senior leaders and staff members of Aravind through surveys and discussions.",
-      "The research aims to gain insights into the development of best practices that contribute to the sustainability and long-term success of family businesses.",
-    ],
-    keywords: ["Research", "HR", "Family Business", "Academia"],
-    gallery: ["/images/phd_research.svg"],
-  },
+  
   {
     id: 20,
     title: "Independence Day Celebration at Aravind-Chennai",
@@ -546,7 +530,7 @@ export const newsList = [
     centre: "Geneva, Switzerland",
     date: "2026-09-01",
     category: "Conferences",
-    thumbnail: "/images/who_meeting.svg",
+    thumbnail: "2026_09_02_WHO SPECS 2030 initiative meeting, Geneva, Switzerland (1).jpeg",
     shortDescription:
       "Thulasiraj Ravilla, Director – Operations, AECS, participated as a Panelist at the WHO Meeting on SPECS 2030 Initiative.",
     body: [
@@ -555,7 +539,7 @@ export const newsList = [
       "The SPECS 2030 Initiative represents a critical effort to strengthen eye care systems globally and ensure equitable access to vision care services.",
     ],
     keywords: ["WHO", "SPECS 2030", "Global Eye Care", "Geneva"],
-    gallery: ["/images/who_meeting.svg"],
+    gallery: ["2026_09_02_WHO SPECS 2030 initiative meeting, Geneva, Switzerland (3).jpg", "2026_8_ED_.png"],
   },
   {
     id: 34,
@@ -563,7 +547,7 @@ export const newsList = [
     centre: "Chennai",
     date: "2026-09-01",
     category: "Training",
-    thumbnail: "/images/ikshana_training.svg",
+    thumbnail: "2026_8_Chennai_Ikshana (1).JPG",
     shortDescription:
       "The 7th batch of Īkshana programme was conducted at ARCORE, Aravind-Chennai, with 38 postgraduate participants.",
     body: [
@@ -572,7 +556,7 @@ export const newsList = [
       "A total of 38 postgraduates participated, representing a diverse group of institutions from across India, including participants from Kerala, Maharashtra, Jharkhand, and Karnataka.",
     ],
     keywords: ["Postgraduate", "Training", "Chennai", "Surgery"],
-    gallery: ["/images/ikshana_training.svg"],
+    gallery: ["2026_8_Chennai_Ikshana (23).JPG","2026_8_Chennai_Ikshana (6).JPG","2026_8_Chennai_Ikshana (8).JPG","2026_8_Chennai_Ikshana (13).JPG"],
   },
   {
     id: 35,
@@ -594,7 +578,7 @@ export const newsList = [
   {
     id: 36,
     title: "BMJ Awards South Asia 2026 - Primary Care Excellence",
-    centre: "Chennai",
+    centre: "Pondicherry",
     date: "2026-09-05",
     category: "Events",
     thumbnail: "south asia.png",
@@ -610,156 +594,27 @@ export const newsList = [
   },
   {
     id: 37,
-    title: "Eye Donation Awareness Fortnight - Madurai Hospital Cornea Retrieval Training",
+    title: "Eye Donation Awareness Fortnight - Aravind-Madurai",
     centre: "Madurai",
     date: "2026-08-25",
     category: "Others",
     thumbnail: "/images/eye_donation_training.svg",
     shortDescription:
-      "Aravind-Madurai organised multiple awareness programmes during the National Eye Donation Fortnight (August 25 - September 8).",
+      "As part of the National Eye Donation Fortnight (25 August - 8 September), Aravind-Madurai organised a series of awareness programmes across Madurai, Kodaikanal, Theni, Sivagangai, Pudukkottai, Kumbakonam and Dindigul.",
     body: [
       "As part of the National Eye Donation Fortnight, observed annually from August 25 to September 8 to raise public awareness and encourage people to pledge their eyes for corneal donation, Aravind-Madurai organised a series of awareness programmes and activities.",
-      "On 25th August, a Hospital Cornea Retrieval Training Programme was organised in association with the Indian Medical Association (IMA) for 30 IMA doctors. Dr. Sridhar, State President, IMA Tamil Nadu, delivered the Chief Guest address, and Dr. N. Venkatesh Prajna delivered the Guest of Honour address.",
-      "Sessions covered strengthening hospital cornea retrieval and eye donation practices, with participation from multiple medical consultants and Eye Bank managers.",
+      "25th August: A Hospital Cornea Retrieval Training Programme was organised in association with the Indian Medical Association (IMA) for 30 IMA doctors at the IMA Hall, Madurai. Dr. Sridhar, State President, IMA Tamil Nadu, delivered the Chief Guest address, and Dr. N. Venkatesh Prajna, Director - Finance & Academics, AECS, delivered the Guest of Honour address, focusing on strengthening hospital cornea retrieval and eye donation practices.",
+      "26th August: An Eye Donation Awareness Programme, oath-taking and signature campaign were organised at Railway Hospital, Madurai, with Dr. Meera, ACMS, and Dr. Vimala, Chief, Ophthalmology, participating as Chief Guests. A total of 60 participants, including doctors, nurses, staff and patients, took the eye donation oath and signed the signature board.",
+      "27th August: An Eye Donation Awareness Programme was organised in association with the Lions Club of Navajeevan and Madurai Host at Sourashtra College, Madurai. PMJF Dr. M. Stalin Arockia Raj, Second Vice District Governor, 2026-27, delivered the Guest of Honour address, and an Eye Donation Oath was taken by all participants.",
+      "28th August: An Orientation Programme on the Hospital Cornea Retrieval Programme (HCRP) was held at Government Hospital, Kodaikanal, with around 30 doctors, nurses and supportive staff participating.",
+      "29th August: An Eye Donation Awareness Programme was organised at Nalam Hospital, Theni, with Dr. Basheer, Medical Officer, felicitating the programme, and Dr. Ganapathy Rajesh, HOD, Department of Ophthalmology, delivering the Chief Guest address. Around 25 participants took part.",
+      "31st August: A Felicitation Programme for Eye Donation Donor Families was organised at the Sivagangai Collectorate to honour 27 families who had donated the eyes of their loved ones, with Thiru. P. Akash, IAS, District Collector, Sivagangai, as Chief Guest.",
+      "1st September: Around 120 participants, including doctors, nurses, supportive staff and patients, took part in an Eye Donation Human Chain, Signature Campaign and Awareness Programme organised with Government Medical College and Hospital, Pudukkottai.",
+      "2nd September: An Eye Donation Awareness Programme and Drawing Competition were organised with the Lions Club of Kumbakonam Host at Government College for Women, Kumbakonam, with around 250 students and Lions Club members participating.",
+      "3rd September: An Eye Donation Awareness Rally and Seminar were organised at Government Medical College and Hospital, Dindigul. Dr. Sai Saravanan, Dean, GMCH, Dindigul, flagged off the rally, and the programme was attended by doctors and 150 Nursing students, all of whom took the Eye Donation Oath.",
     ],
-    keywords: ["Eye Donation", "Awareness", "Madurai", "Cornea"],
+    keywords: ["Eye Donation", "Awareness", "Madurai", "Fortnight"],
     gallery: ["/images/eye_donation_training.svg"],
-  },
-  {
-    id: 38,
-    title: "Eye Donation Awareness Programme at Railway Hospital, Madurai",
-    centre: "Madurai",
-    date: "2026-08-26",
-    category: "Others",
-    thumbnail: "/images/railway_hospital_awareness.svg",
-    shortDescription:
-      "An Eye Donation Awareness Programme was organised at Railway Hospital, Madurai, with 60 participants.",
-    body: [
-      "An Eye Donation Awareness Programme, oath-taking and signature campaign were organised at Railway Hospital, Madurai, with Dr. Meera, ACMS, and Dr. Vimala, Chief, Ophthalmology, participating as Chief Guests.",
-      "D. Saravanan conducted the awareness session. All participants took the eye donation oath and signed the signature board. A total of 60 participants, including doctors, nurses, staff and patients, participated in the programme.",
-      "The event successfully promoted the noble cause of eye donation and encouraged hospital staff to support corneal transplantation initiatives.",
-    ],
-    keywords: ["Eye Donation", "Awareness", "Madurai", "Hospital"],
-    gallery: ["/images/railway_hospital_awareness.svg"],
-  },
-  {
-    id: 39,
-    title: "Eye Donation Awareness Programme at Sourashtra College, Madurai",
-    centre: "Madurai",
-    date: "2026-08-27",
-    category: "Others",
-    thumbnail: "/images/sourashtra_college.svg",
-    shortDescription:
-      "An Eye Donation Awareness Programme was organised at Sourashtra College in association with Lions Clubs.",
-    body: [
-      "An Eye Donation Awareness Programme was organised in association with the Lions Club of Navajeevan and Madurai Host at Sourashtra College, Madurai, with students and faculty participating.",
-      "PMJF Dr. M. Stalin Arockia Raj, Second Vice District Governor, 2026–27, delivered the Guest of Honour address. Krishnasree, Principal, delivered the felicitation address.",
-      "D. Saravanan handled a session on the Overview of Eye Banking and the Role of Students in Promoting Eye Donation. An Eye Donation Oath was taken by all the participants, energising the student community to become ambassadors for eye donation.",
-    ],
-    keywords: ["Eye Donation", "Students", "Madurai", "Lions Club"],
-    gallery: ["/images/sourashtra_college.svg"],
-  },
-  {
-    id: 40,
-    title: "Hospital Cornea Retrieval Programme Orientation at Kodaikanal",
-    centre: "Kodaikanal",
-    date: "2026-08-28",
-    category: "Workshop",
-    thumbnail: "/images/kodaikanal_hcrp.svg",
-    shortDescription:
-      "An Orientation Programme on the Hospital Cornea Retrieval Programme (HCRP) was held at Government Hospital, Kodaikanal.",
-    body: [
-      "An Orientation Programme on the Hospital Cornea Retrieval Programme (HCRP) was held at Government Hospital, Kodaikanal. The programme was presided over by the Chief Medical Officer of the hospital, who emphasised the importance of strengthening eye donation and cornea retrieval services at the hospital.",
-      "D. Saravanan handled the session on the Hospital Cornea Retrieval Programme. Around 30 participants, including doctors, nurses and supportive staff, actively participated in the programme.",
-      "The orientation provided healthcare workers with the knowledge and skills needed to identify potential eye donors and facilitate timely cornea retrieval.",
-    ],
-    keywords: ["HCRP", "Cornea", "Kodaikanal", "Training"],
-    gallery: ["/images/kodaikanal_hcrp.svg"],
-  },
-  {
-    id: 41,
-    title: "Eye Donation Awareness Programme at Nalam Hospital, Theni",
-    centre: "Theni",
-    date: "2026-08-29",
-    category: "Others",
-    thumbnail: "/images/theni_awareness.svg",
-    shortDescription:
-      "An Eye Donation Awareness Programme was organised at Nalam Hospital, Theni, with around 25 participants.",
-    body: [
-      "An Eye Donation Awareness Programme was organised at Nalam Hospital, Theni, with Dr. Basheer, Medical Officer, felicitating the programme.",
-      "Dr. Ganapathy Rajesh, HOD, Department of Ophthalmology, participated as the Chief Guest and delivered an informative talk on the important role of healthcare workers in promoting eye donation.",
-      "D. Saravanan highlighted the importance of donor identification. Around 25 participants, including doctors and nurses, actively participated in the programme.",
-    ],
-    keywords: ["Eye Donation", "Hospital", "Theni", "Healthcare"],
-    gallery: ["/images/theni_awareness.svg"],
-  },
-  {
-    id: 42,
-    title: "Felicitation Programme for Eye Donation Donor Families in Sivagangai",
-    centre: "Sivagangai",
-    date: "2026-08-31",
-    category: "Events",
-    thumbnail: "/images/sivagangai_felicitation.svg",
-    shortDescription:
-      "A Felicitation Programme was organised to honour 27 families who had made the noble decision to donate the eyes of their loved ones.",
-    body: [
-      "A Felicitation Programme for Eye Donation Donor Families was organised at the Sivagangai Collectorate to honour 27 families who had made the noble decision to donate the eyes of their loved ones.",
-      "Thiru. P. Akash, IAS, District Collector, Sivagangai, participated as the Chief Guest and addressed the gathering. He appreciated the selfless and noble decision of the deceased donors' families to provide the gift of sight to people affected by corneal blindness.",
-      "The District Collector also honoured the Dean, Department of Ophthalmology, and Department of Forensic Medicine, Government Sivagangai Medical College and Hospital, in appreciation of their support and contribution towards promoting eye donation.",
-    ],
-    keywords: ["Eye Donation", "Donor Families", "Sivagangai", "Felicitation"],
-    gallery: ["/images/sivagangai_felicitation.svg"],
-  },
-  {
-    id: 43,
-    title: "Eye Donation Human Chain at Pudukkottai",
-    centre: "Pudukkottai",
-    date: "2026-09-01",
-    category: "Others",
-    thumbnail: "/images/pudukkottai_chain.svg",
-    shortDescription:
-      "An Eye Donation Human Chain, Signature Campaign and Awareness Programme involved 120 participants at Government Hospital, Pudukkottai.",
-    body: [
-      "Around 120 participants, including doctors, nurses, supportive staff and patients, participated in the Eye Donation Human Chain, Signature Campaign and Eye Donation Awareness Programme, organised in association with Government Medical College and Hospital, Pudukkottai.",
-      "Dr. S. Kalaivani, Dean, Government Medical College and Hospital, Pudukkottai, presided over these programmes and emphasised the importance of promoting eye donation among the public and healthcare professionals.",
-      "The programme created awareness and promoted the noble cause of restoring sight to people affected by corneal blindness.",
-    ],
-    keywords: ["Eye Donation", "Community", "Pudukkottai", "Campaign"],
-    gallery: ["/images/pudukkottai_chain.svg"],
-  },
-  {
-    id: 44,
-    title: "Eye Donation Awareness Programme at Government College for Women, Kumbakonam",
-    centre: "Kumbakonam",
-    date: "2026-09-02",
-    category: "Others",
-    thumbnail: "/images/kumbakonam_awareness.svg",
-    shortDescription:
-      "An Eye Donation Awareness Programme and Drawing Competition were organised at Government College for Women, Kumbakonam.",
-    body: [
-      "An Eye Donation Awareness Programme and Drawing Competition were organised in association with the Lions Club of Kumbakonam Host at Government College for Women, Kumbakonam.",
-      "Dr. Ahila, Principal, Government College for Women, presided over the programme and encouraged students to actively participate in the eye donation movement.",
-      "D. Saravanan delivered a session on Eye Donation and the Role of Students in Promoting the Eye Donation Movement. Four students were selected in the drawing competition as winners and were honoured with prizes. Around 250 students and lions club members participated.",
-    ],
-    keywords: ["Eye Donation", "Students", "Kumbakonam", "Competition"],
-    gallery: ["/images/kumbakonam_awareness.svg"],
-  },
-  {
-    id: 45,
-    title: "Eye Donation Awareness Rally and Seminar at Dindigul",
-    centre: "Dindigul",
-    date: "2026-09-03",
-    category: "Others",
-    thumbnail: "/images/dindigul_rally.svg",
-    shortDescription:
-      "An Eye Donation Awareness Rally and Seminar were organised at Government Medical College and Hospital, Dindigul.",
-    body: [
-      "An Eye Donation Awareness Rally and Seminar were organised at Government Medical College and Hospital, Dindigul. Dr. Sai Saravanan, Dean, GMCH, Dindigul, flagged off the rally, presided over the programme and delivered the Chief Guest address.",
-      "Dr. Ravindran, HOD, Department of Ophthalmology, delivered the keynote address. Dr. Priya, Department of Ophthalmology, and D. Saravanan handled sessions on Eye Banking, Eye Donation and the Role of Healthcare Professionals.",
-      "The programme was attended by the RMO, Medical Superintend, the HOD of Ophthalmology, doctors and 150 Nursing students. An Eye Donation Oath was also taken by all the participants.",
-    ],
-    keywords: ["Eye Donation", "Rally", "Dindigul", "Nursing"],
-    gallery: ["/images/dindigul_rally.svg"],
   },
   {
     id: 46,
@@ -780,11 +635,11 @@ export const newsList = [
   },
   {
     id: 47,
-    title: "Inauguration of a New Crèche at Aravind-Salem",
+    title: "Inauguration of a New Creche at Aravind-Salem",
     centre: "Salem",
     date: "2026-09-02",
     category: "Events",
-    thumbnail: "/images/creche_inauguration.svg",
+    thumbnail: "2026_8_Salem_Inau_Creche (3).JPG",
     shortDescription:
       "A new crèche facility was inaugurated at Aravind-Salem by Dr. B. Manohar Babu.",
     body: [
@@ -793,7 +648,7 @@ export const newsList = [
       "The crèche facility represents Aravind's commitment to supporting the work-life balance and well-being of its staff members.",
     ],
     keywords: ["Crèche", "Facility", "Salem", "Staff Support"],
-    gallery: ["/images/creche_inauguration.svg"],
+    gallery: ["2026_8_Salem_Inau_Creche (6).JPG","2026_8_Salem_Inau_Creche (5).JPG","2026_8_Salem_Inau_Creche (7).JPG","2026_8_Salem_Inau_Creche (9).JPG"],
   },
   {
     id: 48,
@@ -801,7 +656,7 @@ export const newsList = [
     centre: "Madurai",
     date: "2026-09-02",
     category: "CME",
-    thumbnail: "/images/dme_360_session.svg",
+    thumbnail: "2026_8_MDU_Retina_scientific session DME 360.JPG",
     shortDescription:
       "DME 360, a scientific session, promoted a holistic, evidence-based, interdisciplinary approach to Diabetic Macular Edema management.",
     body: [
@@ -810,7 +665,7 @@ export const newsList = [
       "Dr. R. Kim, CMO, Aravind-Madurai, led robust discussions with expert panellists, effectively bridging systemic evidence with clinical realities and striving for better and safer outcomes for DME patients.",
     ],
     keywords: ["DME", "Diabetes", "Madurai", "Interdisciplinary"],
-    gallery: ["/images/dme_360_session.svg"],
+    gallery: ["2026_8_MDU_Retina_scientific session DME 360.JPG"],
   },
   {
     id: 49,
@@ -835,7 +690,7 @@ export const newsList = [
     centre: "Aurolab",
     date: "2026-08-29",
     category: "Events",
-    thumbnail: "/images/employee_connect.svg",
+    thumbnail: "2026_8_Aurolab_EMP Connect.jpeg",
     shortDescription:
       "An Employee Connect session was organised at Aurolab, engaging 30 Production Operators.",
     body: [
@@ -844,7 +699,7 @@ export const newsList = [
       "The session reflected Aurolab's commitment to valuing its workforce and fostering a supportive workplace culture.",
     ],
     keywords: ["Employee Engagement", "HR", "Aurolab", "Team Building"],
-    gallery: ["/images/employee_connect.svg"],
+    gallery: ["2026_8_Aurolab_EMP Connect.jpeg"],
   },
   {
     id: 51,
@@ -937,7 +792,7 @@ export const newsList = [
     centre: "Salem",
     date: "2026-08-30",
     category: "Workshop",
-    thumbnail: "/images/ideathon.svg",
+    thumbnail: "2026_8_Salem_Ideathon  (1).jpg",
     shortDescription:
       "An Ideathon was conducted at Aravind-Salem to encourage innovative thinking and problem-solving.",
     body: [
@@ -946,7 +801,7 @@ export const newsList = [
       "The event witnessed active participation from doctors, administrative staff, and senior AOPs, making it an excellent platform for cross-functional collaboration and knowledge sharing.",
     ],
     keywords: ["Innovation", "Problem-Solving", "Salem", "Ideation"],
-    gallery: ["/images/ideathon.svg"],
+    gallery: ["2026_8_Salem_Ideathon  (2).jpg", "2026_8_Salem_Ideathon  (4).jpg","2026_8_Salem_Ideathon  (5).jpg"],
   },
   {
     id: 57,
@@ -1087,7 +942,7 @@ export const newsList = [
 ];
 
 export const categories = ["All", "CME", "Events", "Workshop", "Training", "Conferences", "Others"];
-export const centres = ["All Locations", "Salem", "Tirunelveli", "Madurai", "Coimbatore", "Pondicherry", "Chennai", "Tirupur", "Dindigul", "Thanjavur", "Tuticorin", "Aurolab", "Multiple Centers"];
+export const centres = ["All Locations", "Salem", "Tirunelveli", "Madurai", "Coimbatore", "Pondicherry", "Chennai", "Tirupur", "Dindigul", "Thanjavur", "Tuticorin", "Aurolab", "LAICO", "Visitors", "Multiple Centers"];
 
 export function formatDate(dateStr) {
   const d = new Date(dateStr);
